@@ -1,0 +1,312 @@
+Java
+C#
+F#
+Visual Basics
+Python 
+Ruby
+Php
+Javascript
+Typescript
+
+
+Browsers supported by selenium
+Chrome
+FireFox
+InternetExplorer
+MicroSoft edge
+Opera
+
+
+https://selenium.dev/downloads
+SearchConText : search context is a supermost interface in webdriver.
+                Search Context is a interface
+     Methods of search context	
+		1)FindElement();
+		2)FindElements();
+
+JavaScriptExecutor:javaScriptExecutor is a interface.
+      Methods of JavaScriptExecutor.
+  		1)executeScript();
+		2)executeASyncScript();
+
+TakeScreenShot : TakeScreenShot is a interface it contains methods
+                  to take a screenshot of failed scripts.
+      Methods of TakescreenShot
+		1)getScreenShotAs();
+
+WebDriver  : Webdriver is an interface, webdriver is a driver which
+             is used to driver any web applications.
+     
+ Methods Of Webdriver
+		1)getString();
+		2)getPageSource();
+		3)getCurrentUrl();
+        4)getWindowHandle();
+		5)getWindowHandles();
+		6)switchTo();
+		7)close();
+		8)quit();
+  		9)navigate();
+    10)manage();
+    11)getTitle();
+
+Steps to create java project in eclipse.
+1.Open eclipse
+2.click on create new java project
+3.Provide conventional project name
+4.Click on finish
+5.Right click on projectName and click on new under new choose Folder
+   give folder name as drivers
+6.Right click on projectName and click on new under new choose Folder
+   give folder name as jar
+
+Steps to download selenium
+1.Open browser.
+2.Enter a url (https://selenium.dev/downloads)
+3.hit on latest stable version of selenium
+
+Steps to download chromedriver
+1.Open browser.
+2.Enter a url (https://selenium.dev/downloads)
+3.Scrool downside until you get options called browsers
+4.Click on browsers, under browsers their is chrome.
+5.In chrome option click on documentation.
+6.In chrome documentation page click on latest stable version
+7.Choose option called win32..Zip , It will start downloading chrome
+8.After downloading you should unzip the Zipped folder and copy chromedriver.exe file.
+9.Open eclipse and paste it under drivers folder.
+
+
+Steps to download chromedriver
+1.Open browser.
+2.Enter a url (https://selenium.dev/downloads)
+3.Scrool downside until you get options called browsers
+4.Click on browsers, under browsers their is FireFox.
+5.In Firefox option click on documentation.it will open new page Firefox Documentation 
+6.In Firefox Documentation page click on "geckodriver releases".
+7.It will redirect to github Firefoc releases page in that page scrool down untill 
+   u find assets under asstes look for geckodriver.
+8.In geckodriver choose according to your system configuration (Example windows32 Bit or windows64 Bit)
+9.It will download Firefox driver.
+10.After downloading you should unzip the Zipped folder and copy geckodriver.exe file.
+11.Open eclipse and paste it under drivers folder.
+
+
+
+WebElement : All the elements present in webpage are called webelements
+
+Methods of webelements
+
+1.clear();
+2.click();
+3.sendkeys();
+4.getAttribute();
+5.getCssSelector();
+6.getLocation();
+7.getSize();
+8.getTagName();
+9.getText();
+10.isDisplayed();
+11.isEnabled();
+12.isSelected();
+13.getRect();
+
+
+Every element in webpage will be having ***HTML DOM STRUCTURTE***
+
+  <a  id="id1" name="n1">google</a>
+
+<a       = tagName
+id       = AttributeName
+id1      =AttributeValue
+>google< = linkText/HyperText/visibletext
+</a>     = closing tagname
+
+Locators : Locators are nothing but one which is used to locate element in webpage.
+Their are 8 types of locators
+1. ID
+		Usage:WebElement mitt = driver.findElement(By.id("id2"));
+	         mitt.click();
+2. Name
+		Usage:WebElement mitt = driver.findElement(By.name("n2"));
+		      mitt.click();
+3. ClassName
+		Usage:WebElement mitt = driver.findElement(By.className("c2"));
+	         mitt.click();
+4. TagName
+      Usage:WebElement mitt = driver.findElement(By.tagName("a"));
+	         mitt.click();
+5. LinkText
+		Usage:WebElement mitt = driver.findElement(By.linkText("MITT"));
+		      mitt.click(); 
+6. Partial LinkText
+      Usage:WebElement mitt = driver.findElement(By.partialLinkText("MIT"));
+		        mitt.click();
+
+7. CssSelector: CssSelector is a special kind of locator we have to foolow the syntax
+   Syntax:  tag[AttributeName=AttributeValue]
+
+   Usage:a[id='id1']   : WebElement mitt = driver.findElement(By.cssSelector("a[class=c1]"));
+		                   mitt.click();
+   Usage:a[name='n1']  : WebElement mitt = driver.findElement(By.cssSelector("a[class=c1]"));
+		                   mitt.click();    
+   Usage:a[class='c1'] : WebElement mitt = driver.findElement(By.cssSelector("a[class=c1]"));
+		                   mitt.click(); 						
+						 
+
+8. XPATH : Xpath is nothing but path of an element in given HTML structure.
+           xpath is used to identify an element from its root.
+
+Their are two types of XPATH:
+1.Absolute Xpath
+2.Relative Xpath
+
+Absolute Xpath: Absolute Xpath is a type of xpath is used to identify element from its
+ 					root element to immediate element.
+To find element using absolute xpath we allways start with single forword slash(/).
+ Example: /html/body/a
+
+xpath with indexing: Xpath with indexing is nothing but to identify particular immediate element
+                     we go with Xpath with indexing.
+
+Example: /html/body/div[1]
+
+Xpath for Facebook link :  /html/body/div[1]/a[1]
+Xpath for Qspiders link :  /html/body/div[1]/a[2]
+
+Xpath for Instagram link:  /html/body/div[2]/a[1]
+Xpath for Jspiders link :  /html/body/div[2]/a[2]
+
+Xpath for FaceBook and Qspiders  :  /html/body/div[1]
+Xpath for Instagram and jspiders : /html/body/div[2]
+
+Xpath for FaceBook and instagram : /html/body/div/a[1]
+Xpath for Qspiders and jspiders : /html/body/div/a[2]
+
+
+Relative Xpath: Relative xpath is a type of xpath which is used to idetify immediate element
+                directly using double forword slash(//)
+
+Relative Xpaths example
+
+Xpath for Facebook link :  //div[1]/a[1]
+Xpath for Qspiders link :  //div[1]/a[2]
+Xpath for Instagram link:  //div[2]/a[1]
+Xpath for Jspiders link :  //div[2]/a[2]
+
+Xpath for FaceBook and Qspiders  :  //div[1]
+Xpath for Instagram and jspiders : //div[2]
+
+Xpath for FaceBook and instagram : //div/a[1]   or //a[1]
+Xpath for Qspiders and jspiders :  //div/a[2]   or //a[2]
+
+
+Types of Relative xpath
+1.Relative xpath with attribute.
+2.Relative xpath with text function
+3.Relative xpath with contains function
+4.Traversing relative xpath.
+5.Independent and Dependant relative xpath.
+
+
+1.Relative xpath with attribute: It is a type of xpath which used with attributes
+                                 of immediate element.
+
+Syntax to use xpath with attributes:
+            //tagName[@AttributeName='AttributeValue']
+
+Xpath for facebook using xpath with attributes:
+          using id as attribute    :  //a[@id='id1']
+          using name as attribute  :  //a[@name='n1'] 
+          using class as attribute :  //a[@class='c1']
+          using href as attribute :  //a[@href='https://www.facebook.com/']
+
+Xpath for Qspiders using xpath with attributes:
+          using id as attribute    :  //a[@id='id2']
+          using name as attribute  :  //a[@name='n2'] 
+          using class as attribute :  //a[@class='c2']
+          using href as attribute  :  //a[@href='https://www.qspiders.com/']
+
+Xpath for instagram using xpath with attributes:
+          using id as attribute    :  //a[@id='id3']
+          using name as attribute  :  //a[@name='n3'] 
+          using class as attribute :  //a[@class='c3']
+          using href as attribute  :  //a[@href='https://www.instagram.com/']
+
+Xpath for Jspiders using xpath with attributes:
+          using id as attribute    :  //a[@id='id4']
+          using name as attribute  :  //a[@name='n4'] 
+          using class as attribute :  //a[@class='c4']
+          using href as attribute  :  //a[@href='https://www.jspiders.com/']
+
+
+2.Relative xpath with text function: It is a type of Xpath to find element by using text function.
+          Syntax:  //tagName[text()='linkText']
+      				 //tagName[.='linkText']
+
+
+Xpath for facebook using text() function  :  //a[text()='FACEBOOK']
+													//a[.='FACEBOOK']
+
+Xpath for Qspiders using text() function  :  //a[text()='QSPIDERS']
+													//a[.='QSPIDERS']
+
+Xpath for Instagram using text() function :  //a[text()='INSTAGRAM']
+													//a[.='INSTAGRAM']
+
+Xpath for Jspiders using text() function  :  //a[text()='JSPIDERS']
+													//a[.='JSPIDERS']
+
+
+3.Relative xpath with contains function: Relative Xpath is a type of xpath which is used to find
+                                        a immediate element using LinkText Partially.
+
+Syntax to use xpath with contains function:
+								//tagName[contains(text(),'linktext')]
+								//tagName[contains(@AttributeName,'AttributeValue')]
+
+Xpath for Facebook using contains function  : //a[contains(text(),'FACE')]
+Xpath for Qspiders using contains function  : //a[contains(text(),'QSPI')]
+Xpath for Instagram using contains function : //a[contains(text(),'INST')]
+Xpath for Jspiders using contains function  : //a[contains(text(),'JSPI')]
+
+
+FindElement and FindElements
+
+1.FindElement : FindElement is used to find one element.
+     usage : WebElement mitt = driver.findElement(By.linkText("MITT"));
+		      mitt.click();
+
+2.FindElements : FindElements is used to find multiple elements.
+     usage : List<WebElement> allNames = driver.findElements(By.xpath("//a"));
+		      int counts = allNames.size();
+
+Diffrence between FindElement and FindElements
+
+					FindElement
+a.Used to handle single element.
+b.Return type of FindElement is webelement.
+c.If locator is not matching it will through 'NOSUCHELEMENTEXCEPTION'.
+d.If locators are matching with multiple element it will take the first matching element.
+
+					FindElements
+a.Used to handle multiple element.
+b.Return type of FindElements is List<webelement>.
+c.If locator is not matching it will through Empty List
+d.If locators are matching with multiple element it will return all matching element
+
+Handling Auto Suggestions using FindElements.
+*********Scenario*********
+1.Open browser
+2.Enter google.com
+3.In google.com search bar search "Selenium" 
+4.write xpath to get all given suggestions.
+
+
+
+
+
+
+
+
+
